@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const setDelay=(millisecond)=>{
+    //   return new Promise((resolve,reject)=>{
+    //     if(typeof millisecond!="number"){
+    //       reject(new Error("参数变量必修是数字"));
+    //     };
+    //     setTimeout(()=>{
+    //       resolve(`延迟了${millisecond}毫秒之后输出的`)
+    //     },millisecond)
+    //   })
+    // };
+    // const setDelaySecond=(second)=>{
+    //   return new Promise((resolve,reject)=>{
+    //     if(typeof second!="number"||second>10){
+    //       reject(new Error("参数变量必须是数字且小于0"));
+    //     };
+    //     setTimeout(()=>{
+          
+    //       console.log(`执setDelaySecond里面的内容`);
+    //       resolve("标记")
+    //     },second*1000)
+    //   })
+    // };
+    // // setDelaySecond(3).then((result)=>{
+    // //   console.log(result);
+    // // }).catch((err)=>{
+    // //   console.log(err)
+    // // });
+    // setDelay(2000).then((result)=>{
+    //   console.log(result);
+    //   console.log("第一步");
+    //   return setDelaySecond(20);
+    //  }).catch((err)=>{
+    //    console.log(err)
+    //  }).then((result)=>{
+    //   console.log("进行到了第二步");
+    //   console.log(result);
+    // })
+    const demo=async()=>{
+      let result=await new Promise((resolve,reject)=>{
+        setTimeout(() => {
+          resolve("我延迟了3秒")
+          console.log(2)
+        }, 3000);
+      });
+      console.log("我要等上面的程序执行之后才会执行;");
+    
+    };
+    demo()
+  </script>
+</body>
+</html>
